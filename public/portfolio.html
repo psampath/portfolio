@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Sampath Pasupunuri</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<meta name="description" content=" ... add description here ... " />
+	<meta name="keywords" content=" ... add keywords here ... " />
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	
+	<!-- //////// Favicon ////////  -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"  />
+	
+	<!-- //////// Css StyleSheets ////////  -->
+	<link href="_layout/style.css"       rel="stylesheet" type="text/css" media="all"   />
+	<link href="_layout/style-print.css" rel="stylesheet" type="text/css" media="print" />
+
+	<!-- //////// jQuery ////////  -->
+	<script src="_layout/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+	
+	<!-- //////// DD_belatedPNG - Png Fix for IE ////////  -->
+	<!--[if IE 6 ]>
+		<script type="text/javascript" src="_layout/js/DD_belatedPNG_0.0.7a-min.js"></script>
+		<script type="text/javascript">
+			DD_belatedPNG.fix('#header,#content,#footer');
+		</script>
+	<![endif]-->
+	
+	<!-- //////// Cufon Font Replacement ////////  -->
+	<script type="text/javascript" src="_layout/js/cufon/cufon-yui.js"></script>
+	<script type="text/javascript" src="_layout/js/cufon/hattori_hanzo.font.js"></script>
+
+	<!-- //////// Tipsy - custom Tooltips ////////  -->
+	<link rel="stylesheet" type="text/css" href="_layout/js/tipsy/css.tipsy.css" />
+	<script type="text/javascript" src="_layout/js/tipsy/jquery.tipsy.js"></script>
+
+	<!-- //////// PrettyPhoto ////////  -->
+	<link rel="stylesheet" type="text/css" href="_layout/js/prettyphoto/css.prettyPhoto.css" />
+	<script type="text/javascript" src="_layout/js/prettyphoto/jquery.prettyPhoto.js"></script>
+	
+	<!-- //////// Inset Border ////////  -->
+	<script type="text/javascript" src="_layout/js/insetbordereffect/jquery.insetBorderEffect.min.js"></script>
+	
+	<!-- //////// Customs JS  ////////  -->	
+	<script type="text/javascript">
+	/* <![CDATA[ */	                                         
+		$(document).ready(function(){
+		
+			// font replacement
+			if ( ! ( $.browser.msie & ($.browser.version == 6) ) )
+			{ 	
+				$("h1#name").css({'font-size':'46px', 'padding-top':'20px' , 'margin-bottom':'0px' });
+				Cufon.replace('#portfolio h2, h2.cv-section-name, h1#name, h2.title'); // using cufon with IE6 breaks the layout in some cases
+				
+			}	
+			
+			// tooltips
+			$('.tip').tipsy({gravity: 'e'});	//  apply class .tip to any <a> tag to make it's  title be displayed like a tooltip
+			
+			// lightbox
+			$("a[rel^='prettyPhoto']").prettyPhoto({
+				theme: 'light_square',
+				hideflash: false, 		// Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto
+				wmode: 'opaque', 		// Set the flash wmode attribute
+				autoplay: true, 		// Automatically start videos: True/False
+				modal: false 			// If set to true, only the close button will close the window
+			});
+			
+			// inset border of portofolio item imgs
+			$('#portfolio .portfolio-item img').insetBorder({
+			  inset : 10,
+			  borderColor : '#fff',
+			  speed : 250,
+			  borderType : 'solid'
+			});
+		
+		});
+	/* ]]> */			
+	</script> 
+	
+</head>
+<body>
+	
+	<noscript>
+		<link href="_layout/nojs.css" rel="stylesheet" type="text/css" media="all" />
+		<div id="nojs">JavaScript seems to be Disabled! This website works best with JavaScript enabled.</div>
+	</noscript>
+	
+	<div id="wrap">
+	
+		<div id="header">
+			
+			<div id="block-top"></div>
+			
+			<div id="personal-info" class="fixed">
+			
+				<a id="picture-of-you" href="_content/big-profile.jpg" title="Sampath" rel="prettyPhoto">
+					<img src="_content/profile.png" width="100" height="100" alt="" />
+				</a>
+				
+				<h1 id="name">Sampath Pasupunuri</h1>
+				<h2 id="what-you-do">Application Developer</h2>
+				
+			</div><!-- end #personal-info -->
+					
+			<ul id="nav" class="fixed">
+				<li><a href="index.html">Resume</a></li>
+				<li>/</li>
+				<li><a href="portfolio.html" class="active">Portfolio</a></li>
+				<li>/</li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul><!-- end #nav -->
+
+			<div class="divider"></div>
+			
+		</div><!-- end #header -->
+		
+		<div id="content" class="fixed">
+		<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+
+			<h2 class="title">Portfolio</h2>	
+			<div id="portfolio">
+
+				<div class="portfolio-item col-1 fixed">
+
+					<div class="portfolio-col-2 float-left padded-right">
+
+						<a href="https://play.google.com/store/apps/details?id=com.eenadu.epaper" class="bordered"
+							> <img
+							src="_content/andhra.png" width="208" height="211" alt="" />
+						</a>
+
+					</div>
+					<div class="portfolio-col-3 float-right">
+
+						<br />
+
+						<h2>Andhra Pradesh Newspapers</h2>
+
+						<p>An android application that lets its readers to read a set of regional newspapers from 
+						Andhra Pradesh, India. Developed this application as a freelancer. Thousands of users use this app daily.</p>
+
+						<p>
+							<strong>Live preview:</strong> <br />
+							<a href="https://play.google.com/store/apps/details?id=com.eenadu.epaper">Andhra Pradesh Newspapers</a>
+						</p>
+
+					</div>
+
+				</div>
+				
+				<!-- end .portfolio-item -->
+				<div class="portfolio-item col-1 fixed">
+					
+					<div class="portfolio-col-2 float-left padded-right">
+						
+						<a href="https://play.google.com/store/apps/details?id=com.andhrajyothi.epaper" class="bordered" >
+							<img src="_content/jyothy.png" width="208" height="211" alt="" />					
+						</a>
+											
+					</div>
+					<div class="portfolio-col-3 float-right">
+						
+						<br />
+							
+						<h2>Andhra Jyothy</h2>
+					
+						<p>An android application that lets its readers to read an Indian regional newspaper. 
+						Developed this application as a freelancer. There are around 300+ visitors for this app daily.</p>
+						
+						<p><strong>Live preview:</strong>
+						   <br /><a href="https://play.google.com/store/apps/details?id=com.andhrajyothi.epaper">Andhra Jyothy</a></p>
+						
+					</div>
+					
+				</div><!-- end .portfolio-item -->
+				
+				<!-- end .portfolio-item -->
+				<div class="portfolio-item col-1 fixed">
+					
+					<div class="portfolio-col-2 float-left padded-right">
+						
+						<a href="https://play.google.com/store/apps/details?id=com.newspapers.karnatakapapers" class="bordered" >
+							<img src="_content/karnataka.png" width="208" height="211" alt="" />					
+						</a>
+											
+					</div>
+					<div class="portfolio-col-3 float-right">
+						
+						<br />
+							
+						<h2>Karnataka Newspapers</h2>
+					
+						<p>An android application that lets its readers to read a set of regional newspapers from 
+						Andhra Pradesh, India. Developed this application as a freelancer.</p>
+						
+						<p><strong>Live preview:</strong>
+						   <br /><a href="https://play.google.com/store/apps/details?id=com.newspapers.karnatakapapers">Karnataka Newspapers</a></p>
+						
+					</div>
+					
+				</div><!-- end .portfolio-item -->
+			
+				<div class="portfolio-item col-1 fixed">
+						<br />
+						<h2>Transition Advantage</h2>
+						<p>A Healthcare product to prevent 30-day re-admission of patients to reduce hospital costs and
+						improve quality of care. This project's implementation is completed and yet to go live. My responsibilities in this
+						project included from developing a proof of concept to the delivery of the product.</p>
+						<p><strong>For more info:</strong>
+						   <br /><a href="http://www.vreehealth.com/">Transition Advantage</a></p>
+				</div><!-- end .portfolio-item -->
+				
+				<div class="portfolio-item col-1 fixed">
+					<br />
+						<h2>ResultsAnywhere Mobile App</h2>
+						<p>A mobile application for Results Anywhere service that allows providers and clinic staff to view the lab results of patients in integrated labs.
+						Developed this application on android platform. This application is made available internally and not published anywhere as it
+						is intendend only for specific users. </p>
+						<p><strong>For more info:</strong>
+						   <br /><a href="http://www.ignissystems.com/public/index.php?q=node/385">Results Anywhere</a></p>
+					
+				</div><!-- end .portfolio-item -->
+				
+				<div class="portfolio-item col-1 fixed">
+					<br />
+						<h2>Pearson Higher Education</h2>
+						<p>This is a web based training and e-learning solution that offers customized course materials,
+						 custom textbooks, custom educational technology and online learning solutions.</p>
+						<p><strong>Live preview</strong>
+						   <br /><a href="http://www.pearsonhighered.com/pearsonhigheredus/index.page?forced_logout=forced_logged_out">
+						   Pearson Higher Education</a></p>
+					
+				</div><!-- end .portfolio-item -->
+				
+				<div class="portfolio-item col-1 fixed">
+					<br />
+						<h2>Deals2Buy</h2>
+						<p>This is a web application that provides information about best deals, sales and coupons from all over the
+						Internet to its visitors. I was involved in migrating the servers from PHP to Ruby on Rails.</p>
+						<p><strong>Live preview</strong>
+						   <br /><a href="http://www.deals2buy.com/">
+						   Deals2Buy</a></p>
+				</div><!-- end .portfolio-item -->
+			</div><!-- end #portfolio -->
+			
+		<!-- ////////////////////////////////////////////////////////////////////////////////////// -->	
+		</div><!-- end #content -->
+		
+		<div id="footer" class="fixed">
+			
+			<div class="divider2"></div>
+			
+			<p id="copyright">&copy; 2013 Sampath Pasupunuri. All rights reserved.</p>
+			<a href="#" id="top">&#710; Top</a>
+			
+		</div><!-- end #footer -->
+		
+	</div><!-- end #wrap -->
+	
+	<script type="text/javascript"> Cufon.now(); </script>
+
+	<!-- analytics code here -->
+
+</body>
+</html>
