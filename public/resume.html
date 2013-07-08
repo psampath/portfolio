@@ -17,7 +17,7 @@
 	<!-- //////// Css StyleSheets ////////  -->
 	<link href="_layout/style.css"       rel="stylesheet" type="text/css" media="all"   />
 	<link href="_layout/style-print.css" rel="stylesheet" type="text/css" media="print" />
-
+	
 	<!-- //////// jQuery ////////  -->
 	<script src="_layout/js/jquery-1.4.2.min.js" type="text/javascript"></script>
 	
@@ -41,19 +41,16 @@
 	<link rel="stylesheet" type="text/css" href="_layout/js/prettyphoto/css.prettyPhoto.css" />
 	<script type="text/javascript" src="_layout/js/prettyphoto/jquery.prettyPhoto.js"></script>
 	
-	<!-- //////// Inset Border ////////  -->
-	<script type="text/javascript" src="_layout/js/insetbordereffect/jquery.insetBorderEffect.min.js"></script>
-	
 	<!-- //////// Customs JS  ////////  -->	
 	<script type="text/javascript">
 	/* <![CDATA[ */	                                         
 		$(document).ready(function(){
 		
 			// font replacement
-			if ( ! ( $.browser.msie & ($.browser.version == 6) ) )
+			if ( ! ( $.browser.msie && ($.browser.version == 6) ) )
 			{ 	
 				$("h1#name").css({'font-size':'46px', 'padding-top':'20px' , 'margin-bottom':'0px' });
-				Cufon.replace('#portfolio h2, h2.cv-section-name, h1#name, h2.title'); // using cufon with IE6 breaks the layout in some cases
+				Cufon.replace('#portfolio h2, h2.cv-section-name, h1#name'); // using cufon with IE6 breaks the layout in some cases
 				
 			}	
 			
@@ -67,14 +64,6 @@
 				wmode: 'opaque', 		// Set the flash wmode attribute
 				autoplay: true, 		// Automatically start videos: True/False
 				modal: false 			// If set to true, only the close button will close the window
-			});
-			
-			// inset border of portofolio item imgs
-			$('#portfolio .portfolio-item img').insetBorder({
-			  inset : 10,
-			  borderColor : '#fff',
-			  speed : 250,
-			  borderType : 'solid'
 			});
 		
 		});
@@ -107,9 +96,9 @@
 			</div><!-- end #personal-info -->
 					
 			<ul id="nav" class="fixed">
-				<li><a href="resume.html">Resume</a></li>
+				<li><a href="resume.html" class="active">Resume</a></li>
 				<li>/</li>
-				<li><a href="index.html" class="active">Portfolio</a></li>
+				<li><a href="index.html">Portfolio</a></li>
 				<li>/</li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul><!-- end #nav -->
@@ -121,152 +110,140 @@
 		<div id="content" class="fixed">
 		<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
 
-			<h2 class="title">Portfolio</h2>	
-			<div id="portfolio">
+			<div id="cv-1">
+			
+				<!-- // PERSONAL DETAILS     ////////////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Personal Details</h2>
+					
+					<ul class="cv-section-items">
+						
+						<li class="cv-item">
+							<span class="topic">Name:</span>         
+							Sampath Kumar Pasupunuri
+						</li>
+						<li class="cv-item">
+							<span class="topic">Day of Birth:</span>
+							28th February 1988
+						</li>
+						<li class="cv-item">
+							<span class="topic">Adress:</span>
+							3505 Moor Pointe Dr, Cumming, GA
+						</li>
+						
+						<li class="cv-item">
+							<span class="topic">Email:</span>
+							<a href="mailto:sampath@pasupunuri.com">sampath@pasupunuri.com</a>
+						</li>
+							
+					</ul><!-- end .cv-section-items -->
 
-				<div class="portfolio-item col-1 fixed">
+				</div><!-- end .cv-section -->
+				
+				<!-- // PROFESIONAL PROFILE  ////////////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Profesional Profile</h2>
+					
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							<p>I have over 4 years of application development experience with broad range of computer expertise. 
+							Worked on a number of projects that helped me gain strong analytical, organizational and problem solving skills.
+							Demonstrated ability to work in fast paced, technically challenging and deadline oriented environments.
+							</p>
+							<p>I have a high passion for working with new technologies. In my spare time I like to learn new technologies and develop applications as a freelancer.
+							Developed three android applications that are on google play store and have got good number of downloads and reviews.</p>
+						</li>
+						
+					</ul><!-- end .cv-section-items -->
 
-					<div class="portfolio-col-2 float-left padded-right">
-
-						<a href="https://play.google.com/store/apps/details?id=com.eenadu.epaper" class="bordered"
-							> <img
-							src="_content/andhra.png" width="208" height="211" alt="" />
-						</a>
-
-					</div>
-					<div class="portfolio-col-3 float-right">
-
-						<br />
-
-						<h2>Andhra Pradesh Newspapers</h2>
-
-						<p>An android application that lets its readers to read a set of regional newspapers from 
-						Andhra Pradesh, India. Developed this application as a freelancer. Thousands of users use this app daily.</p>
-
-						<p>
-							<strong>Live preview:</strong> <br />
-							<a href="https://play.google.com/store/apps/details?id=com.eenadu.epaper">Andhra Pradesh Newspapers</a>
-						</p>
-
-					</div>
-
+				</div><!-- end .cv-section -->
+				
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Freelance Experience</h2>
+					
+					<ul class="cv-section-items">
+					<li class="cv-item">
+					<h2>Android Application Developer</h2>
+					<br />
+					<p>
+					Developed three android applications as a freelancer that are published on google play store.
+					</p>
+					<ul>
+						<li>Andhra Pradesh Newspapers - 35000+ downloads as of 30th June 2013.</li>
+						<li>Andhra Jyothy Newspaper - 1500+ downloads as of 30th June 2013.</li>
+						<li>Karnataka Newspapers - 1000+ downloads as of 30th June 2013 (one week after release).</li>
+					</ul>
+					<p>
+							<b>Environment:</b> Android SDK, Java, Ruby, Sinatra, Heroku
+							</p>	
+					</li>
+					</ul>
 				</div>
 				
-				<!-- end .portfolio-item -->
-				<div class="portfolio-item col-1 fixed">
+				<!-- // WORK EXPERIENCE      ////////////////////////////////////////////////////// -->
+				<div class="cv-section col-1 fixed">
+				
+					<h2 class="cv-section-name">Work Experience</h2>
 					
-					<div class="portfolio-col-2 float-left padded-right">
-						
-						<a href="https://play.google.com/store/apps/details?id=com.andhrajyothi.epaper" class="bordered" >
-							<img src="_content/jyothy.png" width="208" height="211" alt="" />					
-						</a>
-											
-					</div>
-					<div class="portfolio-col-3 float-right">
-						
-						<br />
+					<ul class="cv-section-items">
+					
+						<li class="cv-item">
+							<h4>Dec 2011 - Present</h4>
+							<h2>Software Engineer, Consultant</h2>
+							<h3>Healthcare-Liaison Technologies, GA</h3>
+							<br />
+							<p>I was brought in to assist with the implementation of a proof of concept for a healthcare product and the implementation was approved for
+							further development. I was involved from initial design and investigation of platforms to the delivery of the product. During this process I had a number of key
+							responsiblities like establishing coding patterns for a larger team at offshore to follow, implemenatation of security framework,
+							integration with various other in-house developed modules and desiging an incremental data model based off HL7 RIM.
+							</p>
 							
-						<h2>Andhra Jyothy</h2>
-					
-						<p>An android application that lets its readers to read an Indian regional newspaper. 
-						Developed this application as a freelancer. There are around 300+ visitors for this app daily.</p>
+							I also worked on a few small-scale projects that include  
+							<ul>
+								<li>Developing an android application for ResultsAnwhere service.</li>
+								<li>Hospital Enablement	that process CCDs (Continuity of Care Document) and load data into the system.</li>
+								<li>MLLP (Message lower layer protocol) interface engine.</li>
+							</ul> 
+							<p>
+							<b>Environment:</b> JEE 6(CDI, EJB, JSF, JAX-RS, JAX-WS, JPA, JAXB), Seam, Spring batch, 
+							Hibernate, JSP, JBoss AS 7.1.0 Final, JBoss AS 7.0.2 Final, JBoss 4.2.3 GA, Apache-Tomcat-7.0.4, SQL Server, TestNG, SOAP, REST, JSON, XML, Arquillian, 
+							Maven, SVN, Jenkins, Log4j, Jackson, Android SDK.
+							</p>
+						</li>
+						<li class="cv-item">
+							<h4>Jun 2011 - Nov 2011</h4>
+							<h2>Software Developer, Consultant</h2>
+							<h3>Pearson, NY</h3>
+							<br />
+							<p>Assisted with enhancement of a web based e-learning application. A few of my major accomplishments were</p>
+							<ul>
+								<li>Owned the data access layer to accommodate changes made in database schema in each sprint.</li>
+								<li>Involved in the development of Site and Search administration system. </li>
+								<li>Coordinated with offshore team for clarifications on requirements and for issues resolution.</li>
+							</ul>
+							<p>
+							<b>Environment:</b> Spring 2.5.5, Hibernate, Seam, JSF, Java Script, Ajax, XHTML, Maven, JUnit, Oracle, SVN, Apache, Apache Tomcat 6, Hudson
+							</p>
+						</li>
 						
-						<p><strong>Live preview:</strong>
-						   <br /><a href="https://play.google.com/store/apps/details?id=com.andhrajyothi.epaper">Andhra Jyothy</a></p>
+						<li class="cv-item">
+							<h4>Jan 2010 - May 2011</h4>
+							<h2>Graduate Assistant</h2>
+							<h3>Western Kentucky University, KY</h3>
+							<br />
+							<ul>
+								<li>Developed an iPhone application that keeps all its users posted with the news in Journalism department.or</li>
+								<li>Assisted Dr. Bruce Kessler to code PI's wavelet-based spectrum analysis algorithm into a webservice using Java.</li>
+								<li>Assisted Professor Atici’s students in python programming.</li>
+							</ul>
+						</li>
 						
-					</div>
-					
-				</div><!-- end .portfolio-item -->
-				
-				<!-- end .portfolio-item -->
-				<div class="portfolio-item col-1 fixed">
-					
-					<div class="portfolio-col-2 float-left padded-right">
-						
-						<a href="https://play.google.com/store/apps/details?id=com.newspapers.karnatakapapers" class="bordered" >
-							<img src="_content/karnataka.png" width="208" height="211" alt="" />					
-						</a>
-											
-					</div>
-					<div class="portfolio-col-3 float-right">
-						
-						<br />
-							
-						<h2>Karnataka Newspapers</h2>
-					
-						<p>An android application that lets its readers to read a set of regional newspapers from 
-						Andhra Pradesh, India. Developed this application as a freelancer.</p>
-						
-						<p><strong>Live preview:</strong>
-						   <br /><a href="https://play.google.com/store/apps/details?id=com.newspapers.karnatakapapers">Karnataka Newspapers</a></p>
-						
-					</div>
-					
-				</div><!-- end .portfolio-item -->
-			
-				<div class="portfolio-item col-1 fixed">
-						<br />
-						<h2>Transition Advantage</h2>
-						<p>A Healthcare product to prevent 30-day re-admission of patients to reduce hospital costs and
-						improve quality of care. This project's implementation is completed and yet to go live. My responsibilities in this
-						project included from developing a proof of concept to the delivery of the product.</p>
-						<p><strong>For more info:</strong>
-						   <br /><a href="http://www.vreehealth.com/">Transition Advantage</a></p>
-				</div><!-- end .portfolio-item -->
-				
-				<div class="portfolio-item col-1 fixed">
-					<br />
-						<h2>ResultsAnywhere Mobile App</h2>
-						<p>A mobile application for Results Anywhere service that allows providers and clinic staff to view the lab results of patients in integrated labs.
-						Developed this application on android platform. This application is made available internally and not published anywhere as it
-						is intendend only for specific users. </p>
-						<p><strong>For more info:</strong>
-						   <br /><a href="http://www.ignissystems.com/public/index.php?q=node/385">Results Anywhere</a></p>
-					
-				</div><!-- end .portfolio-item -->
-				
-				<div class="portfolio-item col-1 fixed">
-					<br />
-						<h2>Pearson Higher Education</h2>
-						<p>This is a web based training and e-learning solution that offers customized course materials,
-						 custom textbooks, custom educational technology and online learning solutions.</p>
-						<p><strong>Live preview</strong>
-						   <br /><a href="http://www.pearsonhighered.com/pearsonhigheredus/index.page?forced_logout=forced_logged_out">
-						   Pearson Higher Education</a></p>
-					
-				</div><!-- end .portfolio-item -->
-				
-				<div class="portfolio-item col-1 fixed">
-					<br />
-						<h2>Deals2Buy</h2>
-						<p>This is a web application that provides information about best deals, sales and coupons from all over the
-						Internet to its visitors. I was involved in migrating the servers from PHP to Ruby on Rails.</p>
-						<p><strong>Live preview</strong>
-						   <br /><a href="http://www.deals2buy.com/">
-						   Deals2Buy</a></p>
-				</div><!-- end .portfolio-item -->
-			</div><!-- end #portfolio -->
-			
-		<!-- ////////////////////////////////////////////////////////////////////////////////////// -->	
-		</div><!-- end #content -->
-		
-		<div id="footer" class="fixed">
-			
-			<div class="divider2"></div>
-			
-			<p id="copyright">&copy; 2013 Sampath Pasupunuri. All rights reserved.</p>
-			<a href="#" id="top">&#710; Top</a>
-			
-		</div><!-- end #footer -->
-		
-	</div><!-- end #wrap -->
-	
-	<script type="text/javascript"> Cufon.now(); </script>
-
-	<!-- analytics code here -->
-
-</body>
-</html>eb 2010</h4>
+						<li class="cv-item">
+							<h4>Jun 2009 - Feb 2010</h4>
 							<h2>Web Developer</h2>
 							<h3>Spectrawide, India</h3>
 							<br />
@@ -342,13 +319,17 @@
 							<h4>2010 - 2011</h4>
 							<h2>MS in Computer Science, Western Kentucky University</h2>
 							<br />
-							
+							<p>
+							GPA: 3.81
+							</p>
 						</li>
 						<li class="cv-item">
 							<h4>2005 - 2009</h4>
 							<h2>Bachelor of Computer Science, JNTU</h2>
 							<br />
-							
+							<p>
+							Score: 65%
+							</p>
 						</li>
 						
 					</ul><!-- end .cv-section-items -->
@@ -370,7 +351,7 @@
 		</div><!-- end #footer -->
 		
 		<a href="javascript:window.print()" id="print" title="Print CV" class="tip">Print CV</a>
-		<a href="#" id="download" title="Download CV" class="tip">Download CV</a>
+		<!--<a href="#" id="download" title="Download CV" class="tip">Download CV</a>-->
 	
 	</div><!-- end #wrap -->
 	
